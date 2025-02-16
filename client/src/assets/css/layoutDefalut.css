@@ -1,0 +1,42 @@
+header{
+  width: 100%;
+  background-color:#f1f1f2;
+  padding: 10px 0;
+}
+.header-container{
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo{
+  display: block;
+}
+header img{
+  width: 55px;
+}
+header .menu Button{
+  margin: 10px;
+  width: 100px;
+}
+main{
+  margin: 30px 0;
+}
+main  .main-container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+footer{
+  background-color: #f1f1f2;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  header .menu Button{
+    width: 60px;
+    margin: 7px;
+  }
+}

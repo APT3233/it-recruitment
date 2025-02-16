@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+
+if [ -d "../script/init" ]; then
+    pushd ../setup/init > /dev/null 2>&1
+elif [ -d "./init" ]; then
+    pushd ./init > /dev/null 2>&1
+else
+    pushd .. > /dev/null 2>&1
+fi
+
+[ -f ./.env ] && source .env
+
+popd > /dev/null 2>&1
+
+
+echo "Export successfully !"
+echo $DB_DB
+echo --------------------------------------------------------------------------------
+echo Setup Database
+echo "[ ] Login user root and Create new user"
+
+sudo mysql -h $DB_HOST -u $DB_ROOTUSER -p -Bse \
+"CREATE DATABASE $DB_DB;
+CREATE USER IF NOT EXISTS '$DB_USER'@'%' IDENTIFIED BY '$DB_USER_PASSWORD'; 
+GRANT ALL PRIVILEGES ON $DB_DB.* TO '$DB_USER'@'%'; 
+FLUSH PRIVILEGES;"
+
+echo --------------------------------------------------------------------------------
+echo OKE !

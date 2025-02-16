@@ -1,0 +1,122 @@
+
+/**********************************
+********* Start Login Page ********
+***********************************/
+
+.auth__page{
+  background-color: #f3f2f0;
+  height: 100vh;
+}
+.auth__container{
+  max-width: 90%;
+  margin: 0 auto;
+}
+.auth__top{
+  width: 100%;
+}
+.auth__top img {
+  width: 85px;
+  filter: drop-shadow(0 0 7px rgba(0, 0, 255, 0.5)); 
+  border-radius: 5px;
+}
+
+.auth__main .submain__title{
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #051937, #005280, #00929c, #00cf76, #c9ff00); -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+.auth__main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login__form{
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+.auth__page Form{
+  background-color: #ffff;
+  padding: 45px 30px 20px 30px;
+  margin-left: 0;
+  border-radius: 8px;
+}
+.auth__main Form .btn__join{
+  width: 100%;
+  border-radius: 15px;
+  height: 35px;
+}
+.third-party-join__reg-option{
+  position: relative;
+  display: block;
+  width: auto;
+}
+
+.third__party-join__line{
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: #cdcfd2;
+  vertical-align: middle;
+}
+.third-party-join__content{
+  background-color: white;
+  padding: 0 10px;
+  position: absolute;
+  left: 45%;
+  top: 0;
+}
+
+
+.auth__main .main__sign-in{
+  text-align: center;
+  margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .auth__top{
+    text-align: center;
+  }
+  .auth__top img{
+    width: 50px;
+    padding: 10px;
+  }
+  .auth__main .submain__title{
+    font-size: 25px;
+  }
+  .auth__page{
+    height: 800px;
+  }
+}
+
+/***********************************
+******** Start Register Page *******
+************************************/
+.reg__page{
+  height: 1150px;
+}
+
+.register__form{
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+.btn__auth--submit{
+  width: 100%;
+  border-radius: 15px;
+  height: 37px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .reg__page{
+    height: 180vh;
+  }
+  
+}

@@ -1,0 +1,8 @@
+.search__subtitle{
+  margin: 20px 0;
+}
+@media (max-width: 480px){
+  .search__subtitle{
+    font-size: 20px;
+  }
+}
