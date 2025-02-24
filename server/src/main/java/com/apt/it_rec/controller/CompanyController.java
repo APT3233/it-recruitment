@@ -8,12 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import com.apt.it_rec.Service.CompanyService;
 import com.apt.it_rec.Service.JobService;
-import com.apt.it_rec.entity.Company;
 import com.apt.it_rec.entity.CompanyProfile;
 import com.apt.it_rec.entity.Job;
 
 @RestController
-@RequestMapping("/api/companies")
+@RequestMapping("/api/companies")                                      
 public class CompanyController {
     private CompanyService companyService;
     private JobService jobService;
@@ -25,7 +24,7 @@ public class CompanyController {
         this.jobService = jobService;
     }
 
-    @GetMapping("")
+    @GetMapping("") 
     public ResponseEntity<List<CompanyProfile>> getAllCompanies() {
         try {
             List<CompanyProfile> companies = companyService.findAllCompanies();
@@ -36,7 +35,6 @@ public class CompanyController {
 
         }
     }
-
     @GetMapping("/{id}") 
     public ResponseEntity<List<Job>> getJobDetailById(@PathVariable("id") int companyId) {
         try {

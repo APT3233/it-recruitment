@@ -17,6 +17,7 @@ public interface CompanyRepository extends
 {
     // @Query("SELECT c FROM Company c JOIN FETCH c.profile")
     // List<Company> findAllWithProfile();
+    
     @Query("SELECT c FROM CompanyProfile c")
     List<CompanyProfile> findAllProfile();
     

@@ -15,11 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.apt.it_rec.Service.CvService;
 import com.apt.it_rec.Service.JobService;
 import com.apt.it_rec.dto.jobdto.ApplyjobDto;
-import com.apt.it_rec.entity.CV;
 import com.apt.it_rec.entity.Job;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api") 
 public class JobController {
     private JobService jobService;
     private CvService cvService;
@@ -29,7 +28,7 @@ public class JobController {
         this.cvService = cvsService;
     }
 
-    @GetMapping("/job")
+    @GetMapping("/job") 
     public ResponseEntity<List<Job>> getAllJobs() {
         try {
             List<Job> jobs = jobService.getAllJob();
@@ -38,8 +37,7 @@ public class JobController {
             return ResponseEntity.internalServerError().body(null);
         }
     }
-
-    @PostMapping("/apply-job")
+    @PostMapping("/apply-job") 
     public ResponseEntity<Map<String, Object>> applyJobForm(@RequestBody ApplyjobDto applyJob) {
         try {
             System.out.println(applyJob.toString());
@@ -57,5 +55,4 @@ public class JobController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
     }
-
 }

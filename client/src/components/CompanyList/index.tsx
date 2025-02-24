@@ -30,6 +30,7 @@ const CompanyList: React.FC = () => {
     };
     getData()
   }, []);
+  
   return (
     <>
       <div className="section-companylist">
